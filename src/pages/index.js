@@ -76,8 +76,8 @@ const Home = () => {
                 <span className="font-bold mr-2 dark:text-cyan-300">
                   2021 to present
                 </span>{" "}
-                Attending Bachelor's Program in the Faculty of Natural Sciences
-                and Informatics at University of Szeged
+                Attending Bachelor&apos;s Program in the Faculty of Natural
+                Sciences and Informatics at University of Szeged
               </li>
               <li>
                 <span className="font-bold mr-2 dark:text-cyan-300">2022</span>{" "}
