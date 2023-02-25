@@ -1,5 +1,10 @@
 import Head from "next/head";
 import { BsFillMoonStarsFill } from "react-icons/bs";
+import { AiFillLinkedin, AiFillFacebook } from "react-icons/ai";
+import { RiDiscordFill } from "react-icons/ri";
+import sudoku from "../public/sudoku.png";
+import advice from "../public/advices.png";
+import Image from "next/image";
 
 const Home = () => {
   return (
@@ -10,7 +15,7 @@ const Home = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="bg-white px-10">
+      <main className="bg-white px-10 md:px-20 lg:px-40">
         <section className="min-h-screen">
           <nav className="py-10 mb-12 flex justify-between">
             <h1 className="text-xl font-burtons">Dominik Orincsai</h1>
@@ -29,15 +34,105 @@ const Home = () => {
             </ul>
           </nav>
 
-          <div>
-            <h2>Dominik Orincsai</h2>
-            <h3>Developer and Cybersecurity Enthusiast</h3>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui amet
-              quia expedita distinctio nesciunt molestias odit vel voluptates,
-              consectetur itaque cumque repellat cum sit accusantium inventore
-              quasi quaerat architecto sunt.
+          <div className="text-center p-10">
+            <h2 className="text-5xl py-2 text-teal-600 font-medium md:text-6xl">
+              Dominik Orincsai
+            </h2>
+            <h3 className="text-2xl py-2 md:text-3xl">
+              Developer and engineer.
+            </h3>
+            <p className="text-md py-5 leading-8 text-gray-800 md:text-lg max-w-xl mx-auto">
+              Passionate frontend developer with a focus on user experience and
+              a love for clean, maintainable code.
             </p>
+          </div>
+
+          <div className="text-5xl flex justify-center gap-16 py-3 text-gray-600">
+            <AiFillFacebook />
+            <AiFillLinkedin />
+            <RiDiscordFill />
+          </div>
+
+          <div className="mt-20">
+            <h3 className="text-2xl py-1 border-b-4 w-9 border-gray-400">
+              Bio
+            </h3>
+            <ul className="mt-2 leading-8">
+              <li>
+                <span className="font-bold mr-2">2002</span> Born in Mako,
+                Csongrad, Hungary
+              </li>
+              <li>
+                <span className="font-bold mr-2">2021</span> Completed the IT
+                System Operator major in High School.
+              </li>
+              <li>
+                <span className="font-bold mr-2">2021 to present</span>{" "}
+                Attending Bachelor's Program in the Faculty of Natural Sciences
+                and Informatics at University of Szeged
+              </li>
+              <li>
+                <span className="font-bold mr-2">2022</span> Worked at weCan
+                Technology Zrt.
+              </li>
+              <li>
+                <span className="font-bold mr-2">2022</span> Worked at Wedding
+                Manager Kft.
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section>
+          <div className="mt-20">
+            <h3 className="text-2xl py-1 border-b-4 w-24 border-gray-400">
+              Projects
+            </h3>
+            <div className="lg:flex gap-10">
+              <div className="text-center shadow-lg p-10 rounded-xl my-10  dark:bg-white flex-1">
+                <Image
+                  className="rounded-t-lg"
+                  src={sudoku}
+                  alt="Sudoku Solver image"
+                />
+                <h3 className="text-lg font-medium pt-8 pb-2  ">
+                  Sudoku Solver
+                </h3>
+                <p className="py-2">
+                  A simple web app which solves a user-defined sudoku in no
+                  time.
+                </p>
+                <h4 className="py-4 underline underline-offset-4 font-bold text-gray-600">
+                  Tech stack:
+                </h4>
+                <p className="text-gray-800 py-1">React</p>
+                <p className="text-gray-800 py-1">Javascript</p>
+                <p className="text-gray-800 py-1">Jest</p>
+                <p className="text-gray-800 py-1">React Hooks</p>
+              </div>
+
+              <div className="text-center shadow-lg p-10 rounded-xl my-10  dark:bg-white flex-1">
+                <Image
+                  className="rounded-t-lg"
+                  src={advice}
+                  alt="Sudoku Solver image"
+                />
+                <h3 className="text-lg font-medium pt-8 pb-2  ">
+                  Advice Generator
+                </h3>
+                <p className="py-2">
+                  An app that generates an advice - wise or fun - when rolling
+                  the dice.
+                </p>
+                <h4 className="py-4 underline underline-offset-4 font-bold text-gray-600">
+                  Tech stack:
+                </h4>
+                <p className="text-gray-800 py-1">React</p>
+                <p className="text-gray-800 py-1">Typescript</p>
+                <p className="text-gray-800 py-1">styled-components</p>
+                <p className="text-gray-800 py-1">Axios</p>
+              </div>
+            </div>
           </div>
         </section>
       </main>
